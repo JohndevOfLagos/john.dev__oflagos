@@ -1,0 +1,53 @@
+@use "../../Sass/color" as color;
+
+
+.header-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    &>.header-body {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 1rem;
+    }
+}
+
+.nav-items {
+    display: flex;
+    gap: 1rem;
+
+
+    a {
+      position: relative;
+      display: inline-block; /* Changed from flex to inline-block */
+      padding: 0 10px;
+      text-decoration: none; /* Added to remove default underline */
+      color: black; /* Added color for the text */
+      font-size: .9rem;
+
+
+      
+    }
+    
+    a::after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 0%;
+      left: 0;
+      bottom: -8px;
+      background-color: red; /* Replaced color.$primary-color-red with a direct color */
+      transition: width 0.3s ease; /* Added transition for smoother animation */
+    }
+    
+    a:hover::after,
+    a:focus::after, /* Added to handle the active state when link is focused */
+    a:active::after { /* Added to handle the active state when link is clicked */
+      width: 100%;
+      background-color: red; /* Changed to red when active */
+    }
+    
+
+}
+
+
