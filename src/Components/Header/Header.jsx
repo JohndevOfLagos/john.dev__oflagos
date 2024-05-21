@@ -7,7 +7,7 @@ export const Header = () => {
   return (
     <div className="header-wrapper">
       <div className="header-body">
-        <button>
+        <button className="header-cancle-btn">
         <Icon icon="streamline:bracket" />
         </button>
         <ul className="nav-items">
@@ -37,7 +37,7 @@ export const Header = () => {
              </li>
           </NavLink>
         </ul>
-        <button>
+        <button className="header-hire">
           Hire me!
         </button>
       </div>
