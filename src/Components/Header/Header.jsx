@@ -3,17 +3,24 @@ import "./Header.scss"
 import { NavLink } from "react-router-dom";
 import { Icon } from "@iconify/react";
 
-export const Header = () => {
+
+
+export const Header = ({onpenSidebar}) => {
   return (
     <div className="header-wrapper">
       <div className="header-body">
-        <button className="header-cancle-btn">
-        <Icon icon="streamline:bracket" />
+        <button className="header-cancle-btn" onClick={onpenSidebar}>
+        <Icon icon="heroicons-solid:menu-alt-3" />
         </button>
         <ul className="nav-items">
           <NavLink className="navlinks">
              <li >
               Home
+             </li>
+          </NavLink>
+          <NavLink className="navlinks">
+             <li >
+              Support Me
              </li>
           </NavLink>
           <NavLink className="navlinks">
@@ -28,12 +35,17 @@ export const Header = () => {
           </NavLink>
           <NavLink className="navlinks">
              <li >
-              About
+              Skills
              </li>
           </NavLink>
           <NavLink className="navlinks">
              <li >
-              Contact
+              Experience
+             </li>
+          </NavLink>
+          <NavLink className="navlinks">
+             <li >
+              Education
              </li>
           </NavLink>
         </ul>

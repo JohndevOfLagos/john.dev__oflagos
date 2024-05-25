@@ -20,7 +20,7 @@ export const Home = () => {
           </span>
 
           <div className="hero-left-button">
-            <button>My Work</button>
+            <button>Get In Touch</button>
             <button>Let's Start</button>
           </div>
           <div className="social-media-handle">
