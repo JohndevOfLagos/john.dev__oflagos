@@ -5,7 +5,7 @@ import "./SidebarNavigation.scss";
 
 export const SidebarNavigation = ({isOpen, Onclose}) => {
   return (
-    <div className={`sidebarNavigation ${isOpen? "open" : " "}`}>
+    <div className={`sidebarNavigation ${isOpen? "open" : " "}`} onClick={Onclose}>
       <div className="sidebarNavigation-inner">
         <button className="sidebar-cancle" onClick={Onclose}>
         <Icon icon="fxemoji:cancellationx" />
@@ -54,22 +54,7 @@ export const SidebarNavigation = ({isOpen, Onclose}) => {
               <span>Skills</span>
             </li>
           </NavLink>
-          <NavLink to="/experience"  className={({ isActive }) =>
-              `sidebar-navLink ${isActive ? "active" : ""}`
-            }>
-            <li className="sidebar-nav-item">
-            <Icon icon="ic:baseline-history" />
-              <span>Experience</span>
-            </li>
-          </NavLink>
-          <NavLink to="/education"  className={({ isActive }) =>
-              `sidebar-navLink ${isActive ? "active" : ""}`
-            }>
-            <li className="sidebar-nav-item">
-            <Icon icon="carbon:education" />
-              <span>Education</span>
-            </li>
-          </NavLink>
+
 
           <NavLink to="/about"  className={({ isActive }) =>
               `sidebar-navLink ${isActive ? "active" : ""}`

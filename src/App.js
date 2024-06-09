@@ -7,19 +7,10 @@ import { useState } from "react";
 
 function App() {
 
-  const [isSidebarOpen, setOpenSiderbar] = useState(false);
 
-   const opensiderbar =()=> {
-    setOpenSiderbar(true)
-   }
-   const closesidebar =()=> {
-    setOpenSiderbar(false)
-   }
 
   return (
     <>
-    <SidebarNavigation  isOpen={isSidebarOpen} Onclose={closesidebar}/>
-    <Header onpenSidebar={opensiderbar}/>
     <Home/>
     </>
   );

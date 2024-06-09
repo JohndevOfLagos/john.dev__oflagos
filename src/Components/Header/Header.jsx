@@ -38,16 +38,6 @@ export const Header = ({onpenSidebar}) => {
               Skills
              </li>
           </NavLink>
-          <NavLink className="navlinks">
-             <li >
-              Experience
-             </li>
-          </NavLink>
-          <NavLink className="navlinks">
-             <li >
-              Education
-             </li>
-          </NavLink>
         </ul>
         <button className="header-hire">
           Hire me!

@@ -1,0 +1,216 @@
+
+
+@use "../..//Sass/color" as color;
+
+
+
+.LandingPage {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid blue;
+    padding: 80px 80px;
+    @media(max-width:600px) {
+      padding: 30px 20px 80px;
+    }
+    gap: 2rem;
+    
+
+}
+
+
+
+
+
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    @media(max-width:600px) {
+      flex-direction: column;
+    }
+    gap: 2rem;
+  }
+  
+  
+  
+  
+  /// 
+  /// 
+  /// 
+  
+  
+  
+  .hero-left {
+    display: flex;
+    flex-direction: column;;
+  
+    & > .hero-name {
+      display: flex;
+      flex-direction: column;
+  
+      & > h5 {
+        color: #000 ;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 0px;
+
+        letter-spacing: -1.5px;
+      }
+  
+      
+      & > h3 {
+        line-height: 60px;
+        @media(max-width:600px) {
+          line-height: 50px;
+          font-size: 3.5rem;
+        
+        }
+       font-size: 4rem;
+        color: color.$primary-color-orange;
+        max-width: 800px;
+        margin-top: 1rem;
+      }
+  
+      & > .hero-quote {
+        color: #000 ;
+        font-size: 1.2rem;
+        font-weight: 500;
+        max-width: 800px;
+        line-height: 25px;
+        margin-top: 1.2rem;
+      }
+    }
+  
+  
+  }
+  
+  
+  .hero-left-button {
+    display: flex;
+    gap: .8rem;   
+    margin-top: 1.2rem;  
+  
+    & > button {
+      display: flex;
+      align-items: center;
+      padding: 0.6rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      border: 2px solid transparent;
+      border-radius: .8rem;
+      background-color: color.$primary-color-orange;
+      cursor: pointer;
+      transition: all  200ms ease-in;
+  
+      &:hover {
+         color: color.$primary-color-orange;
+         background-color: transparent;
+         border: 2px solid color.$primary-color-orange;
+      }
+      &:active {
+        color: #000;
+        border: 2px solid color.$primary-color-orange;
+        background-color: #fff;
+      }
+    }
+
+
+    & > button:not(:first-child) {
+      display: flex;
+      align-items: center;
+      padding: 0.6rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #000;
+      background-color: transparent;
+      border: 2px solid color.$primary-color-orange;
+      cursor: pointer;
+      transition: all 200ms ease-in;
+  
+      &:hover {
+        color: #fff;
+        border: 2px solid transparent;
+        background-color: color.$primary-color-orange;
+      }
+      &:active {
+        color: color.$primary-color-orange;
+        background-color: #fff;
+        border: 2px solid  color.$primary-color-orange;
+      }
+    }
+  }
+  
+  
+  .social-media-handle {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 1.2rem;
+    & > a {
+      display: flex;
+      align-items: center;
+      color: #000;
+      padding: 10px;
+      border-radius: 999px;
+      transition: all 200ms ease-in-out;
+      
+      &:hover {
+         background-color: #fff;
+         padding: 10px;
+      }
+
+      & > svg {
+        font-size: 25px;
+      }
+    }
+    
+  }
+  
+
+ 
+  ///
+  ///
+  ///
+  
+  
+  
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+  
+    
+    & > img{
+      position: relative;
+      object-fit: cover;
+      height: 450px; /* Set the height to 60px */
+      width: 45%;
+      @media(max-width:920px) {
+        width: 100%;
+      }
+      border-radius: .8rem;
+     
+    }
+
+    & > img::after {
+      content: " ";
+      position: absolute;
+      height: 3px;
+      width: 0%;
+      left: 51%;
+      bottom: -6px;
+      transform: translateX(-52%); /* Center horizontally */
+      background-color: color.$primary-color-orange; /* Replaced color.$primary-color-red with a direct color */
+      transition: width 0.3s ease; /* Added transition for smoother animation */
+    }
+   }
+  
+  
+  
+  
+  
