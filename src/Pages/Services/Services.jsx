@@ -1,6 +1,11 @@
 import React from "react";
 import "./Services.scss";
 
+import SoftwareImage from "../../Assets/image/Image2/me-laptop-developing-web.jpg"
+import WebDesignImage from "../../Assets/image/Image2/brand-identity-sketches-and-laptop.jpg"
+import ConsultationImage from "../../Assets/image/Image2/strategy-client-meeting.jpg"
+import TeamLeadImage from "../../Assets/image/Image2/wirframing-hand-moving-pins-web-design.jpg"
+
 import { Icon } from "@iconify/react";
 
 export const Services = () => {
@@ -9,35 +14,48 @@ export const Services = () => {
       <div className="inner-services">
         <div className="services-head">
           <span>
-            Services
+            How Can I Help You
             <span>.</span>
           </span>
         </div>
         <ul className="service-card-list">
-          <article className="service-card">
-            <Icon icon="mdi:code" />
-            <h4>Web Development</h4>
-            <div className="underline"></div>
+        <article className="service-card">
+            <img src={ConsultationImage} alt="" />
+            <div className="service-card-body">
+            <h4>Consultation<Icon icon="heroicons-outline:chat-alt" /></h4>
             <p>
-            "I provide professional web development services, creating responsive, user-friendly websites to enhance your online presence and drive digital success."
+            Startups often struggle to find software engineers. Initially, few are needed, but more are required as they grow.
             </p>
+            </div>
           </article>
           <article className="service-card">
-            <Icon icon="simple-icons:sketch" />
-            <h4>Web Design</h4>
-            <div className="underline"></div>
+            <img src={TeamLeadImage} alt="" />
+            <div className="service-card-body">
+            <h4>Team Lead<Icon icon="material-symbols:social-leaderboard-outline-rounded" /></h4>
             <p>
-            "Crafting captivating websites tailored to your vision. Elevate your online presence with sleek designs that engage and inspire. Let's bring your ideas to life!"
+            A team leader directs and instructs a workgroup to ensure effective operation. I possess the necessary qualities.
             </p>
+            </div>
+          </article>
+          
+          <article className="service-card">
+            <img src={SoftwareImage} alt="" />
+            <div className="service-card-body">  
+            <h4>Software Development<Icon icon="grommet-icons:technology" /></h4>
+            <p>
+            Software development involves designing, programming, testing, and maintaining applications, frameworks, or software components.
+            </p>
+            </div>
           </article>
           <article className="service-card">
-            <Icon icon="cib:android" />
-            <h4>Apps</h4>
-            <div className="underline"></div>
+            <img src={WebDesignImage} alt="" />
+            <div className="service-card-body">
+            <h4>Web Design<Icon icon="simple-icons:sketch" /></h4>
             <p>
-            "I deliver top-notch app solutions, crafting intuitive, high-performance mobile applications that resonate with users and drive business growth effectively."
+            Web design creates a website's overall look and feel by planning and building its elements, beyond logos and pictures.
             </p>
-          </article>
+            </div>
+          </article>  
         </ul>
       </div>
     </div>

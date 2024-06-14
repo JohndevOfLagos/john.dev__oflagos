@@ -40,7 +40,8 @@ export const Header = ({onpenSidebar}) => {
           </NavLink>
         </ul>
         <button className="header-hire">
-          Hire me!
+           Contact
+          <Icon icon="mingcute:external-link-line" />
         </button>
       </div>
     </div>

@@ -1,7 +1,6 @@
 import React from "react";
 import "./LandingPage.scss";
 
-import { Link } from "react-router-dom";
 import ProfImage from "../../Assets/image/whatsApp.jpeg";
 import { Icon } from "@iconify/react";
 
@@ -11,7 +10,7 @@ export const LandingPage = () => {
       <div className="hero">
         <div className="hero-left">
           <span className="hero-name">
-            <h5> Hey, i'm John <Icon icon="tdesign:wave-left" /></h5>
+            <h5>Hey, i'm John Adewunmi <Icon icon="tdesign:wave-left" /></h5>
             <h3>Frontend Developer</h3>
             <h6 className="hero-quote">
               I'm a Frontend Developer from Nigeria. In IT, change is constant.
@@ -20,34 +19,22 @@ export const LandingPage = () => {
           </span>
 
           <div className="hero-left-button">
-            <button>Get In Touch</button>
-            <button>Let's Start</button>
+            <button>Contact<Icon icon="mingcute:external-link-line" /></button>
+            <button>Book A Free Consultation Call</button>
           </div>
-          <div className="social-media-handle">
-            <Link>
-              <Icon icon="iconoir:instagram" />
-            </Link>
-            <Link>
-              <Icon icon="ri:twitter-x-fill" />
-            </Link>
-            <Link>
-              <Icon icon="mdi:linkedin" />
-            </Link>
-            <Link>
-              <Icon icon="mdi:github" />
-            </Link>
-            <Link>
-              <Icon icon="ic:baseline-tiktok" />
-            </Link>
-          </div>
-        </div>
+          
 
+        </div>
         <div className="hero-right">
-          <img src={ProfImage} alt="" />
+          <img src={ProfImage} alt="" className="hero-photo-img"/>
         </div>
-      </div>
 
- 
+      </div>
+      <div className="hero-left-scroll">
+          <div className="vertical-text">Scroll</div>
+          <div className="animated-line"></div>
+          </div>
+      
     </div>
   );
 };

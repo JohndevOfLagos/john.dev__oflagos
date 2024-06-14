@@ -1,0 +1,288 @@
+@use "../..//Sass/color" as color;
+
+.Footer {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 80px;
+    border: 3px solid red;
+    color: #fff;
+    background-color: #121212;
+
+    @media(max-width:600px) {
+   
+       padding: 30px 20px;
+   }
+
+
+    &>.inner-footer {
+        display: flex;
+        flex-direction: column;
+        
+
+    }
+
+}
+
+
+
+.footer-list  {
+    display: flex;
+    justify-content: space-between;
+    gap: 8rem;
+
+    @media(max-width:600px) {
+      flex-direction: column;
+      gap: 2rem;
+
+    }
+}
+
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem .8rem;
+    width: 100%;
+
+    &>h4 {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-family: system-ui, -apple-system, Ubuntu;
+        margin-bottom: 2rem;
+    }
+
+
+    &>p {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.1rem;
+        max-width: 500px;
+        margin-bottom: 4rem;
+
+
+        &>a {
+            display: flex;
+            align-items: center;
+            color: color.$primary-color-orange;
+            gap: .3rem;
+            font-size: 1.2rem;
+            text-transform: none;
+            margin-top: 0.4rem;
+
+            &>svg {
+                color: #fff;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+
+
+.social-media {
+    &>.social-media-list {
+        list-style: none;
+      }
+  
+      &>.social-media-list  {
+        display: flex;
+        align-items: center;
+        gap: .8rem;
+
+        &>.icon-content {
+            position: relative;
+
+            
+
+
+            &>.tooltip  {
+                position: absolute;
+                top: -30px;
+                left: 50%;
+                transform: translateX(-50%);
+                color: #fff;
+                padding: 6px 10px;
+                border-radius: 5px;
+                opacity: 0;
+                visibility: hidden;
+                font-size: 14px;
+                transition: all 0.3s ease;
+            }
+
+
+            &:hover > .tooltip {
+                opacity: 1;
+                visibility: visible;
+                top: -50px;
+            }
+
+
+            &>a {
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                color: #4d4d4d;
+                background-color: #fff;
+                transition: all 0.3s ease-in-out;
+
+
+                &:hover {
+                    color: white;
+                    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+
+                }
+
+
+                &>svg {
+                    position: relative;
+                    z-index: 1;
+                    width: 30px;
+                    height: 30px;
+                }
+
+
+                .filled {
+                    position: absolute;
+                    top: auto;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 0;
+                    background-color: #000;
+                    transition: all 0.3s ease-in-out;
+                }
+    
+                &:hover {
+                    .filled {
+                      height: 100%;
+                    }
+                  }
+    
+              }
+            }
+
+
+            a[data-social="github"] {
+                .filled {
+                  background-color: #000;
+                }
+                ~ .tooltip {
+                  background-color: #000;
+                }
+              }
+        
+              a[data-social="instagram"] {
+                .filled {
+                  background: #E4405F;
+                }
+                ~ .tooltip {
+                  background: #E4405F;
+                }
+              }
+              a[data-social="twitter"] {
+                .filled {
+                  background: #1DA1F2;
+                }
+                ~ .tooltip {
+                  background: #1DA1F2;
+                }
+              }
+
+              a[data-social="linkedin"] {
+                .filled {
+                  background: #0077b5 ;
+                }
+                ~ .tooltip {
+                  background: #0077b5 ;
+                }
+              }
+              a[data-social="facebook"] {
+                .filled {
+                  background: #1877F2 ;
+                }
+                ~ .tooltip {
+                  background: #1877F2 ;
+                }
+              }
+
+
+      }
+
+}
+
+
+
+
+
+.footer-item2 {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem .8rem;
+    gap: 20rem;
+
+    
+    
+
+
+
+
+    &>.footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        margin-bottom: 4.5rem;
+      
+
+        &>a {
+            font-size: 1.2rem;
+            color: #fff;
+        }
+    }
+    
+
+ 
+}
+
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    &>.footer-contact-card {
+        display: flex;
+        flex-direction: column;
+        
+
+      &>svg{
+        font-size: 3rem;
+      }
+      &>h4{
+        font-size: 2rem;
+        font-weight: 400;
+      }
+      &>span{
+        font-size: 1.1rem;
+        color: color.$primary-color-orange;
+        text-transform: lowercase;
+      }
+
+    }
+        
+}
+
+
+.copyright {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.9rem;
+    color: darken(color.$primary-light-dark, $amount: 30%);
+
+}

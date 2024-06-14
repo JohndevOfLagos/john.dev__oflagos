@@ -1,0 +1,302 @@
+@use "../..//Sass/color" as color;
+
+
+
+
+.Projects {
+    display: flex;
+    flex-direction: column;
+
+
+    padding: 80px 80px;
+    border: 3px solid red;
+    @media(max-width:600px) {
+   
+       padding: 30px 20px;
+   }
+
+
+    &>.inner-project {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+
+        &>.more-project {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+
+
+            &>button {
+                display: flex;
+                align-items: center;
+                max-width: max-content;
+                padding: 0.6rem 1.5rem;
+                font-size: 1rem;
+                font-weight: 600;
+                color: #fff;
+                border: 2px solid transparent;
+                border-radius: .8rem;
+                background-color: color.$primary-color-orange;
+                text-transform: capitalize;
+                cursor: pointer;
+                transition: all  200ms ease-in;
+            
+                &:hover {
+                   color: color.$primary-color-orange;
+                   background-color: transparent;
+                   border: 2px solid color.$primary-color-orange;
+                }
+                &:active {
+                  color: #000;
+                  border: 2px solid color.$primary-color-orange;
+                  background-color: #fff;
+                }
+              }
+          
+            
+        }
+    }
+}
+
+
+
+
+.project-head {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+
+    &>span {
+        display: flex;
+        font-size: 5rem;
+
+        @media(max-width:600px) {
+            font-size: 4rem;
+        }
+
+        @media(max-width:330px) {
+            font-size: 3rem;
+        }
+
+        font-weight: bolder;
+
+        &>span {
+            color: color.$primary-color-orange;
+        }
+    }
+
+}
+
+
+
+
+// =============== 
+// Projects Tours
+// ===============
+
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // 3 columns of equal width
+    gap: 2rem;
+
+    @media(max-width:920px) {
+        grid-template-columns: repeat(2, 1fr); // 2 columns of equal width
+
+    }
+    @media(max-width:600px) {
+        grid-template-columns: repeat(1, 1fr); // 1 columns of equal width
+
+    }
+
+
+
+    .project-card {
+        background: #fff;
+        box-shadow: 0px 0px 20px 5px lighten($color: #000000, $amount: 85%);;
+        margin-bottom: 2rem;
+        overflow: hidden;
+        transition: all 200ms ease-in-out;
+    
+
+        &:hover {
+            box-shadow: 0px 0px 20px 5px lighten($color: #000000, $amount: 80%);
+            transform: scale(1.02);
+        }
+
+
+        &>.project-img-container {
+            position: relative;
+
+            &>.project-img {
+                height: 15rem;
+                object-fit: cover;
+                width: 100%;
+            }
+
+
+            &>.project-date {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                background: color.$primary-color-orange;
+                margin-bottom: 0;
+                color: #fff;
+                text-transform: capitalize;
+                padding: 0.25rem 0.5rem;
+            }
+        }
+
+       
+    }
+}
+
+
+
+
+
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem 1.2rem;
+
+
+
+
+    &>.project-title {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+
+        &>h4 {
+            font-size: 1.1rem;
+            color: #000;
+            margin-bottom: 0.55rem;
+            line-height: 1.25;
+            font-weight: bold;
+        }
+    }
+
+
+
+    &>p {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #000;
+        margin-bottom: 0.55rem;
+        line-height: 1.25;
+        max-width: 500px;
+    }
+}
+
+
+
+
+.project-footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+
+.project-tech-included {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  margin-bottom: 0.55rem;
+   
+
+  &>.project-tech-included-head {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    &>svg {
+        font-size: 1.5rem;
+        color: #fff;
+        padding: 0.10rem .2rem;
+        background-color: #000;
+        border-radius: .2rem;
+    }
+    &>span {
+        display: flex;
+        font-size: 1rem;
+        font-weight: bold;
+        color: color.$primary-color-orange
+    }
+  }
+
+
+}
+
+
+.project-tech-included-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+
+    &>span {
+        display: flex;
+        align-items: center;
+        gap: .3rem;
+        font-size: .8rem;
+        font-weight: bold;
+        padding: 0.12rem .6rem;
+        background-color: color.$primary-lighter-orange;
+        border-radius: .2rem;
+
+
+        &>svg {
+            font-size: 1.2rem;
+            color: #000;
+        }
+    }
+  }
+
+  
+
+ .project-footer {
+     
+    display: flex;
+    justify-content: space-between;
+
+    &>.project-external-link {
+        display: flex;
+        align-items: center;
+        gap: .2rem;
+        font-size: .9rem;
+        font-weight: 500;
+        padding: 0.12rem .6rem;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: color.$primary-color-orange;
+        border-radius: .8rem;
+
+        &>svg {
+          font-size: 1.2rem;
+        }
+
+    }
+
+    &>.project-source-link {
+        display: flex;
+        align-items: center;
+        gap: .2rem;
+        font-size: .9rem;
+        font-weight: 500;
+        text-transform: capitalize;
+    
+        &>svg {
+            font-size: 1.5em;
+          }
+    }
+ }
+

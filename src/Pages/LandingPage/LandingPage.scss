@@ -1,19 +1,19 @@
-
-
 @use "../..//Sass/color" as color;
 
 
 
 .LandingPage {
-    display: flex;
-    flex-direction: column;
-    border: 2px solid blue;
-    padding: 80px 80px;
-    @media(max-width:600px) {
-      padding: 30px 20px 80px;
-    }
-    gap: 2rem;
-    
+  display: flex;
+  flex-direction: column;
+  border: 2px solid blue;
+  padding: 80px 80px;
+
+  @media(max-width:600px) {
+    padding: 30px 20px 80px;
+  }
+
+  gap: 2rem;
+
 
 }
 
@@ -24,193 +24,249 @@
 
 
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    @media(max-width:600px) {
-      flex-direction: column;
-    }
-    gap: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  @media(max-width:600px) {
+    flex-direction: column;
   }
-  
-  
-  
-  
-  /// 
-  /// 
-  /// 
-  
-  
-  
-  .hero-left {
-    display: flex;
-    flex-direction: column;;
-  
-    & > .hero-name {
-      display: flex;
-      flex-direction: column;
-  
-      & > h5 {
-        color: #000 ;
-        font-size: 1.5rem;
-        font-weight: 500;
-        line-height: 0px;
 
-        letter-spacing: -1.5px;
-      }
-  
-      
-      & > h3 {
-        line-height: 60px;
-        @media(max-width:600px) {
-          line-height: 50px;
-          font-size: 3.5rem;
-        
-        }
-       font-size: 4rem;
-        color: color.$primary-color-orange;
-        max-width: 800px;
-        margin-top: 1rem;
-      }
-  
-      & > .hero-quote {
-        color: #000 ;
-        font-size: 1.2rem;
-        font-weight: 500;
-        max-width: 800px;
-        line-height: 25px;
-        margin-top: 1.2rem;
-      }
-    }
-  
-  
-  }
-  
-  
-  .hero-left-button {
-    display: flex;
-    gap: .8rem;   
-    margin-top: 1.2rem;  
-  
-    & > button {
-      display: flex;
-      align-items: center;
-      padding: 0.6rem 1.5rem;
-      font-size: 1rem;
-      font-weight: 600;
-      color: #fff;
-      border: 2px solid transparent;
-      border-radius: .8rem;
-      background-color: color.$primary-color-orange;
-      cursor: pointer;
-      transition: all  200ms ease-in;
-  
-      &:hover {
-         color: color.$primary-color-orange;
-         background-color: transparent;
-         border: 2px solid color.$primary-color-orange;
-      }
-      &:active {
-        color: #000;
-        border: 2px solid color.$primary-color-orange;
-        background-color: #fff;
-      }
-    }
+  gap: 2rem;
+}
 
 
-    & > button:not(:first-child) {
-      display: flex;
-      align-items: center;
-      padding: 0.6rem 1.5rem;
-      font-size: 1rem;
-      font-weight: 600;
-      color: #000;
-      background-color: transparent;
-      border: 2px solid color.$primary-color-orange;
-      cursor: pointer;
-      transition: all 200ms ease-in;
-  
-      &:hover {
-        color: #fff;
-        border: 2px solid transparent;
-        background-color: color.$primary-color-orange;
-      }
-      &:active {
-        color: color.$primary-color-orange;
-        background-color: #fff;
-        border: 2px solid  color.$primary-color-orange;
-      }
-    }
-  }
-  
-  
-  .social-media-handle {
-    display: flex;
-    gap: 0.6rem;
-    margin-top: 1.2rem;
-    & > a {
-      display: flex;
-      align-items: center;
-      color: #000;
-      padding: 10px;
-      border-radius: 999px;
-      transition: all 200ms ease-in-out;
-      
-      &:hover {
-         background-color: #fff;
-         padding: 10px;
-      }
 
-      & > svg {
-        font-size: 25px;
-      }
-    }
-    
-  }
-  
 
- 
-  ///
-  ///
-  ///
-  
-  
-  
-  .hero-right {
+/// 
+/// 
+/// 
+
+
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &>.hero-name {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
 
-  
-    
-    & > img{
-      position: relative;
-      object-fit: cover;
-      height: 450px; /* Set the height to 60px */
-      width: 45%;
-      @media(max-width:920px) {
-        width: 100%;
+    &>h5 {
+      color: #000;
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 0px;
+
+      letter-spacing: -1.5px;
+    }
+
+
+    &>h3 {
+      line-height: 60px;
+
+      @media(max-width:600px) {
+        line-height: 50px;
+        font-size: 3.5rem;
+
       }
-      border-radius: .8rem;
-     
+
+      font-size: 4rem;
+      font-weight: bolder;
+      color: color.$primary-color-orange;
+      max-width: 500px;
+      margin-top: 1rem;
     }
 
-    & > img::after {
-      content: " ";
-      position: absolute;
-      height: 3px;
-      width: 0%;
-      left: 51%;
-      bottom: -6px;
-      transform: translateX(-52%); /* Center horizontally */
-      background-color: color.$primary-color-orange; /* Replaced color.$primary-color-red with a direct color */
-      transition: width 0.3s ease; /* Added transition for smoother animation */
+    &>.hero-quote {
+      color: #000;
+      font-size: 1.2rem;
+      font-weight: 500;
+      max-width: 800px;
+      line-height: 25px;
+      margin-top: 1.2rem;
     }
-   }
+  }
+
+
+}
+
+
+.hero-left-button {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.2rem;
+  height: 100%;
+
+  @media(max-width:600px) {
+    flex-direction: column;
+  }
+
+  &>button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .2rem;
+    padding: 0.6rem 1.2rem;
+    @media(max-width:600px) {
+      padding: 1.4rem 1.2rem;
+    }
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000;
+    background-color: transparent;
+    text-transform: uppercase;
+    border-radius: .8rem;
+    border: 2px solid color.$primary-color-orange;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+
+    &>svg {
+      font-size: 1.5rem;
+      transition: all 200ms ease-in;
+    }
+
+    &:hover {
+      color: #fff;
+      border: 2px solid transparent;
+      background-color: color.$primary-color-orange;
+    }
+
+    &:active {
+      color: color.$primary-color-orange;
+      background-color: #fff;
+      border: 2px solid color.$primary-color-orange;
+    }
+
+
+
+  }
+
+  &>button:hover>svg {
+    transform: translateX(5px);
+    /* Slide the SVG to the right */
+
+  }
+
+
+
+
+  &>button:not(:first-child) {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 1.2rem;
+    @media(max-width:600px) {
+      padding: 1.4rem 1.2rem;
+    }
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: .8rem;
+    background-color: color.$primary-color-orange;
+    cursor: pointer;
+    transition: all 500ms ease-in;
+
+
+
+    &:hover {
+      color: color.$primary-color-orange;
+      background-color: transparent;
+      border: 2px solid color.$primary-color-orange;
+    }
+
+    &:active {
+      color: #000;
+      border: 2px solid color.$primary-color-orange;
+      background-color: #fff;
+    }
+
+
+  }
+}
+
+
+
+
+.hero-left-scroll {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 2rem; /* Adjust the width as needed */
+  height: 200px; /* Adjust the height as needed */
+  margin-top: -4rem;
+  @media(max-width:600px) {
+    margin-top: 0;
+  }
+
+
+
+
+
+  &>.vertical-text {
+    writing-mode: vertical-rl;
+    font-size: 1rem; /* Adjust the font size as needed */
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
   
-  
-  
-  
-  
+  &>.animated-line {
+    width: 1.4px;
+    height: 60px;
+    background-color: black;
+    margin-top: 2.5rem; /* Adjust this margin to control the space below the line */
+    animation: slide-fade 2s infinite;
+  }
+}
+
+
+
+@keyframes slide-fade {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+///
+///
+///
+
+
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+
+
+  &>.hero-photo-img {
+    position: relative;
+    object-fit: cover;
+    height: 450px;
+    /* Set the height to 60px */
+    width: 55%;
+
+    @media(max-width:920px) {
+      width: 100%;
+    }
+
+
+
+  }
+
+
+}

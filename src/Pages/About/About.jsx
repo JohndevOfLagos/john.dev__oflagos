@@ -12,14 +12,15 @@ export const About = () => {
           </span>
           <div className="about-me-discription">
             <span>
-            Crafting beautiful and functional websites is my passion. I dedicate myself fully to every new challenge, ensuring high-quality results. Let's create something remarkable together.
+            I'm John Ayomide Adewunmi. Frontend Developer from Nigeria. In IT, change is constant.
+            Embracing new tech, updating skills keeps me fulfilled. Crafting beautiful and functional websites is my passion. I dedicate myself fully to every new challenge, ensuring high-quality results. Let's create something remarkable together.
             </span>
           </div>
         </div>
         <div className="about-info">
-          <div className="my-stack">
+          <article className="about-body">
             <h4>My Stack</h4>
-            <ul className="stack-container">
+            <ul className="about-items">
               <li>Web Design</li>
               <li>UI/UX Expertise</li>
               <li>HTML</li>
@@ -29,10 +30,10 @@ export const About = () => {
               <li>data flows</li>
               <li>optimizing build process</li>
             </ul>
-          </div>
-          <div className="my-special-places">
+          </article>
+          <article className="about-body">
             <h4>My Special Places</h4>
-            <ul className="special-places-container">
+            <ul className="about-items">
               <li>Stack Overflow</li>
               <li>GitHub</li>
               <li>Reddit</li>
@@ -48,7 +49,7 @@ export const About = () => {
               <li>Instagram</li>
               <li>Discord</li>
             </ul>
-          </div>
+          </article>
         </div>
       </div>
     </div>

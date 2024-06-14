@@ -6,7 +6,11 @@ import { LandingPage } from "../LandingPage/LandingPage";
 import { About } from "../About/About";
 import { Services } from "../Services/Services";
 import { Projects } from "../Projects/Projects"
+import { WhatTheySayAboutMe } from "../WhatTheySayAboutMe/WhatTheySayAboutMe";
 import { Skills } from "../Skills/Skills";
+import { Timeline } from "../Timeline/Timeline";
+import { FAQ } from "../../Components/Help/FAQ";
+import { Footer } from "../../Components/Footer/Footer";
 import { useState } from "react";
 
 export const Home = () => {
@@ -30,7 +34,11 @@ export const Home = () => {
         <About />
         <Services/>
         <Projects/>
+        <WhatTheySayAboutMe/>
         <Skills/>
+        <Timeline/>
+        <FAQ/>
+        <Footer/>
       </div>
     </div>
   );
