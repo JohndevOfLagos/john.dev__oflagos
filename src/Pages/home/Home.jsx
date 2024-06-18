@@ -8,8 +8,8 @@ import { Services } from "../Services/Services";
 import { Projects } from "../Projects/Projects"
 import { WhatTheySayAboutMe } from "../WhatTheySayAboutMe/WhatTheySayAboutMe";
 import { Skills } from "../Skills/Skills";
-import { Timeline } from "../Timeline/Timeline";
-import { FAQ } from "../../Components/Help/FAQ";
+import { Timeline } from "Pages/Timeline/Timeline";
+import { FAQ } from "Components/FAQ/FAQ";
 import { Footer } from "../../Components/Footer/Footer";
 import { useState } from "react";
 

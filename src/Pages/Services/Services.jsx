@@ -19,7 +19,7 @@ export const Services = () => {
           </span>
         </div>
         <ul className="service-card-list">
-        <article className="service-card">
+        <article className="service-card card-1">
             <img src={ConsultationImage} alt="" />
             <div className="service-card-body">
             <h4>Consultation<Icon icon="heroicons-outline:chat-alt" /></h4>
@@ -28,7 +28,7 @@ export const Services = () => {
             </p>
             </div>
           </article>
-          <article className="service-card">
+          <article className="service-card card-2">
             <img src={TeamLeadImage} alt="" />
             <div className="service-card-body">
             <h4>Team Lead<Icon icon="material-symbols:social-leaderboard-outline-rounded" /></h4>
@@ -38,7 +38,7 @@ export const Services = () => {
             </div>
           </article>
           
-          <article className="service-card">
+          <article className="service-card card-3">
             <img src={SoftwareImage} alt="" />
             <div className="service-card-body">  
             <h4>Software Development<Icon icon="grommet-icons:technology" /></h4>
@@ -47,7 +47,7 @@ export const Services = () => {
             </p>
             </div>
           </article>
-          <article className="service-card">
+          <article className="service-card card-4">
             <img src={WebDesignImage} alt="" />
             <div className="service-card-body">
             <h4>Web Design<Icon icon="simple-icons:sketch" /></h4>

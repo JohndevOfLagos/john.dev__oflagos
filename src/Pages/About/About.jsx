@@ -12,7 +12,7 @@ export const About = () => {
           </span>
           <div className="about-me-discription">
             <span>
-            I'm John Ayomide Adewunmi. Frontend Developer from Nigeria. In IT, change is constant.
+            I'm John Ayomide Adewunmi. Frontend Developer from Lagos Nigeria. In IT, change is constant.
             Embracing new tech, updating skills keeps me fulfilled. Crafting beautiful and functional websites is my passion. I dedicate myself fully to every new challenge, ensuring high-quality results. Let's create something remarkable together.
             </span>
           </div>

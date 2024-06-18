@@ -1,48 +1,63 @@
 import React from "react";
-import "./Header.scss"
+import "./Header.scss";
 import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 
 
 
-export const Header = ({onpenSidebar}) => {
+export const Header = ({ onpenSidebar }) => {
   return (
     <div className="header-wrapper">
       <div className="header-body">
         <button className="header-cancle-btn" onClick={onpenSidebar}>
-        <Icon icon="heroicons-solid:menu-alt-3" />
+          <Icon icon="heroicons-solid:menu-alt-3" />
         </button>
         <ul className="nav-items">
-          <NavLink className="navlinks">
-             <li >
-              Home
-             </li>
+          <NavLink
+            className={({ isActive }) => `navlinks ${isActive ? "active" : ""}`}
+            to="/"
+          >
+            <li>Home</li>
           </NavLink>
-          <NavLink className="navlinks">
-             <li >
-              Support Me
-             </li>
+          <NavLink
+            className={({ isActive }) => `navlinks ${isActive ? "active" : ""}`}
+            to="/Home/support-me"
+          >
+            <li>Support Me</li>
           </NavLink>
-          <NavLink className="navlinks">
-             <li >
-              Projects
-             </li>
+          <NavLink
+            className={({ isActive }) => `navlinks ${isActive ? "active" : ""}`}
+            to="/Home/projects"
+          >
+            <li>Projects</li>
           </NavLink>
-          <NavLink className="navlinks">
-             <li >
-              Resume
-             </li>
+          <NavLink
+            className={({ isActive }) => `navlinks ${isActive ? "active" : ""}`}
+            to="/Home/services"
+          >
+            <li>Services</li>
           </NavLink>
-          <NavLink className="navlinks">
-             <li >
-              Skills
-             </li>
+
+          <NavLink
+            className={({ isActive }) => `navlinks ${isActive ? "active" : ""}`}
+            to="/Home/resume"
+          >
+            <li>Resume</li>
+          </NavLink>
+          <NavLink
+            className={({ isActive }) => `navlinks ${isActive ? "active" : ""}`}
+            to="/Home/skills"
+          >
+            <li>Skills</li>
           </NavLink>
         </ul>
-        <button className="header-hire">
-           Contact
+        <Link className="header-hire" to="/Home/contact">
+          <span>
+          Contact
+          </span>
           <Icon icon="mingcute:external-link-line" />
-        </button>
+        </Link>
       </div>
     </div>
   );

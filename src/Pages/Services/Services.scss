@@ -7,7 +7,6 @@
  padding: 80px 80px;
  border: 3px solid red;
  @media(max-width:600px) {
-
     padding: 30px 20px;
 }
 
@@ -73,10 +72,10 @@
     flex-direction: column;
     transition: all 200ms ease-in-out;
     border: 5px solid transparent;
-
+    opacity: 0;
+    animation: serviceanimate 0.4s ease-in-out forwards;
     // box-sizing: border-box;
-    // border-radius: .8rem;
-
+    border-radius: 0.8rem;
     overflow: hidden;
 
 
@@ -88,7 +87,6 @@
 
      &:hover {
         border: 5px solid color.$primary-color-orange;
-        transform: scale(1.06);
      }
      
 
@@ -102,6 +100,33 @@
 
     
 }
+
+
+.service-card.card-1 {
+    animation-delay: 0.1s;
+}
+.service-card.card-2 {
+    animation-delay: 0.2s;
+}
+.service-card.card-3 {
+    animation-delay: 0.3s;
+}
+.service-card.card-4 {
+    animation-delay: 0.4s;
+}
+
+
+@keyframes serviceanimate {
+    0% {
+        transform: scale(1.06);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 
 .service-card-body{
     display: flex;

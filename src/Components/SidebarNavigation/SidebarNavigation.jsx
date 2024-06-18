@@ -13,14 +13,14 @@ export const SidebarNavigation = ({isOpen, Onclose}) => {
         <div className="sidebar-header">Johndeoflagos</div>
 
         <ul className="sidebar-nav">
-        <NavLink to="/home"  className={({ isActive }) =>
+        <NavLink to="/"  className={({ isActive }) =>
               `${isActive ? "active" : ""}`
             }>
        <div className="sidebar-home">
           <h4><Icon icon="lucide:home" />Home</h4>
         </div>
        </NavLink>
-          <NavLink to="/support/"  className={({ isActive }) =>
+          <NavLink to="/Home/support-me"  className={({ isActive }) =>
               `sidebar-navLink ${isActive ? "active" : ""}`
             }>
             <li className="sidebar-nav-item">
@@ -29,7 +29,7 @@ export const SidebarNavigation = ({isOpen, Onclose}) => {
             </li>
           </NavLink>
 
-          <NavLink to="/projects"  className={({ isActive }) =>
+          <NavLink to="/Home/projects"  className={({ isActive }) =>
               `sidebar-navLink ${isActive ? "active" : ""}`
             }>
             <li className="sidebar-nav-item">
@@ -37,8 +37,16 @@ export const SidebarNavigation = ({isOpen, Onclose}) => {
               <span>Projects</span>
             </li>
           </NavLink>
+          <NavLink to="/Home/services"  className={({ isActive }) =>
+              `sidebar-navLink ${isActive ? "active" : ""}`
+            }>
+            <li className="sidebar-nav-item">
+              <Icon icon="material-symbols:dashboard-outline" />
+              <span>Services</span>
+            </li>
+          </NavLink>
 
-          <NavLink to="/resume"  className={({ isActive }) =>
+          <NavLink to="/Home/resume"  className={({ isActive }) =>
               `sidebar-navLink ${isActive ? "active" : ""}`
             }>
             <li className="sidebar-nav-item">
@@ -46,7 +54,7 @@ export const SidebarNavigation = ({isOpen, Onclose}) => {
               <span>Resume</span>
             </li>
           </NavLink>
-          <NavLink to="/skills"  className={({ isActive }) =>
+          <NavLink to="/Home/skills"  className={({ isActive }) =>
               `sidebar-navLink ${isActive ? "active" : ""}`
             }>
             <li className="sidebar-nav-item">
@@ -56,7 +64,7 @@ export const SidebarNavigation = ({isOpen, Onclose}) => {
           </NavLink>
 
 
-          <NavLink to="/about"  className={({ isActive }) =>
+          <NavLink to="/Home/about"  className={({ isActive }) =>
               `sidebar-navLink ${isActive ? "active" : ""}`
             }>
             <li className="sidebar-nav-item">
@@ -65,7 +73,7 @@ export const SidebarNavigation = ({isOpen, Onclose}) => {
             </li>
           </NavLink>
 
-          <NavLink to="/contact"  className={({ isActive }) =>
+          <NavLink to="/Home/contact"  className={({ isActive }) =>
               `sidebar-navLink ${isActive ? "active" : ""}`
             }>
             <li className="sidebar-nav-item">
@@ -74,7 +82,7 @@ export const SidebarNavigation = ({isOpen, Onclose}) => {
             </li>
           </NavLink>
 
-          <NavLink to="/help"  className={({ isActive }) =>
+          <NavLink to="/Home/help"  className={({ isActive }) =>
               `sidebar-navLink ${isActive ? "active" : ""}`
             }>
             <li className="sidebar-nav-item">

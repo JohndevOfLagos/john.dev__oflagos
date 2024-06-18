@@ -19,7 +19,7 @@ export const Projects = () => {
         </div>
 
         <div className="project-list">
-          <article className="project-card">
+          <article className="project-card project-1">
             <div className="project-img-container">
               <img src={TeaBayImage} className="project-img" alt="" />
               <p className="project-date">october 19th, 2023</p>
@@ -63,7 +63,7 @@ export const Projects = () => {
               </div>
             </div>
           </article>
-          <article className="project-card">
+          <article className="project-card project-2">
             <div className="project-img-container">
               <img src={TouristViewImage} className="project-img" alt="" />
               <p className="project-date">october 19th, 2023</p>
@@ -108,7 +108,7 @@ export const Projects = () => {
               </div>
             </div>
           </article>
-          <article className="project-card">
+          <article className="project-card project-3">
             <div className="project-img-container">
               <img src={PencreditImage} className="project-img" alt="" />
               <p className="project-date">febuary 3, 2024</p>

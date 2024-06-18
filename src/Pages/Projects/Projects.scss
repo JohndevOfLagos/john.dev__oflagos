@@ -120,7 +120,9 @@
         box-shadow: 0px 0px 20px 5px lighten($color: #000000, $amount: 85%);;
         margin-bottom: 2rem;
         overflow: hidden;
-        transition: all 200ms ease-in-out;
+        opacity: 0;
+        animation: projectanimate 0.4s ease-in-out forwards;
+
     
 
         &:hover {
@@ -155,7 +157,26 @@
     }
 }
 
+.project-card.project-1 {
+    animation-delay: 0.1s;
+}
+.project-card.project-2 {
+    animation-delay: 0.2s;
+}
+.project-card.project-3 {
+    animation-delay: 0.3s;
+}
 
+@keyframes projectanimate {
+    0% {
+        transform: translateX(-40px);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 
 
