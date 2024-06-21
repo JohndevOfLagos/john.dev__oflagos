@@ -1,9 +1,46 @@
-import React from "react";
+import React, { useRef } from 'react';
 import "./Contact.scss";
+import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 
+import emailjs from '@emailjs/browser';
+
 export const Contact = () => {
+  const navigate = useNavigate()
+
+///////
+
+
+
+
+
+///////  /////   
+
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_lokqrdu', 'template_johndevoflagos', form.current, {
+        publicKey: '81XXHhwnOCjL1Dm61',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          navigate()
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+    
+  };
+
+
+
   return (
     <div className="Contact">
       <header className="contact-section">
@@ -27,60 +64,64 @@ export const Contact = () => {
                     id="email-form"
                     name="email-form"
                     data-name="Email Form"
-                    action=""
-                    method="POST"
                     className="contact-page-form"
                     aria-label="Email Form"
+                    action="https://formspree.io/f/manwwyjn"
+                    method="POST"ref={form} onSubmit={sendEmail}
                   >
                     <div className="form-field-contain">
                       <input
                         type="text"
                         className="form-text-field w-input"
-                        maxlength={256}
-                        name="name"
+                        maxLength={256}
+                        name="user_name"
                         data-name="Name"
                         placeholder="Name*"
-                        id="Name"
+                        id="name"
                         required
                       />
+
                     </div>
 
                     <div className="form-field-contain">
                       <input
                         type="text"
                         className="form-text-field w-input"
-                        maxlength={256}
-                        name="company"
+                        maxLength={256}
+                        name="user_company"
                         data-name="company"
                         placeholder="Company*"
                         id="company"
                         required
                       />
+
                     </div>
 
                     <div className="form-field-contain">
                       <input
                         type="email"
                         className="form-text-field w-input"
-                        maxlength={256}
-                        name="email"
+                        maxLength={256}
+                        name="user_email"
                         data-name="email"
                         placeholder="Email*"
                         id="email"
                         required
                       />
+ 
                     </div>
 
                     <div className="form-field-contain">
                       <textarea
                         placeholder="Message*"
-                        maxlength={256}
+                        maxLength={256}
                         id="message"
-                        name="message"
+                        name="user_message"
                         data-name="message"
-                        required
                         className="form-text-field taller w-input"
+                        required
                       ></textarea>
+          
                     </div>
                     <input
                       type="submit"
@@ -157,22 +198,19 @@ export const Contact = () => {
                     <div className="tooltip">LinkedIn</div>
                   </li>
                 </ul>
+              </div>
             </div>
-            </div>
-
           </li>
-          <li className="getintouch-content-section-item"> 
-
-
+          <li className="getintouch-content-section-item">
             <div className="left-bottom">
-               <h1>Don't go just yet, you can buy me a coffee or send me a
-               donation; chat me up
-               <span>
+              <h1>
+                Don't go just yet, you can buy me a coffee or send me a
+                donation; chat me up
+                <span>
                   <Icon icon="streamline:smiley-happy" />
                   <Icon icon="openmoji:call-me-hand" />
                 </span>
-               </h1>
-     
+              </h1>
             </div>
 
             <div className="right-bottom">
@@ -188,7 +226,6 @@ export const Contact = () => {
                 </div>
               </div>
             </div>
-            
           </li>
         </ul>
       </div>

@@ -12,9 +12,11 @@
     z-index: 9999; /* Ensure it's behind the sidebar content */
     transition: all 0.3s ease-in-out;
     transform: translateX(-100%);
+    display: none;
     @media(max-width:600px) {
       overflow-y: scroll;
     }
+
 }
 
 .sidebarNavigation.open {

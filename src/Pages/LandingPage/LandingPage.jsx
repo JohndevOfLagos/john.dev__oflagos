@@ -21,7 +21,7 @@ export const LandingPage = () => {
 
           <div className="hero-left-button-container">
             <Link class="main-button w-inline-block" to="/Home/contact">
-              <span>Contact</span>
+              <span>Let's Talk</span>
               <Icon icon="mingcute:external-link-line" />
             </Link>
             <Link to="" target="_blank" class="secondary-button w-inline-block">

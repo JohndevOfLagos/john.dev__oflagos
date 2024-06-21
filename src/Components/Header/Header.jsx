@@ -1,7 +1,6 @@
 import React from "react";
 import "./Header.scss";
 import { NavLink } from "react-router-dom";
-import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 
 
@@ -10,9 +9,13 @@ export const Header = ({ onpenSidebar }) => {
   return (
     <div className="header-wrapper">
       <div className="header-body">
-        <button className="header-cancle-btn" onClick={onpenSidebar}>
-          <Icon icon="heroicons-solid:menu-alt-3" />
-        </button>
+
+        <div className="brand-name-logo">
+          <h4>LOGO</h4>
+          <img src="" alt="" />
+        </div>
+
+        <nav>
         <ul className="nav-items">
           <NavLink
             className={({ isActive }) => `navlinks ${isActive ? "active" : ""}`}
@@ -38,26 +41,38 @@ export const Header = ({ onpenSidebar }) => {
           >
             <li>Services</li>
           </NavLink>
-
           <NavLink
             className={({ isActive }) => `navlinks ${isActive ? "active" : ""}`}
-            to="/Home/resume"
+            to="/Home/contact"
           >
-            <li>Resume</li>
+            <li>Contact</li>
           </NavLink>
           <NavLink
             className={({ isActive }) => `navlinks ${isActive ? "active" : ""}`}
-            to="/Home/skills"
+            to="/Home/blogs"
           >
-            <li>Skills</li>
+            <li>Blog</li>
           </NavLink>
         </ul>
-        <Link className="header-hire" to="/Home/contact">
-          <span>
-          Contact
-          </span>
-          <Icon icon="mingcute:external-link-line" />
-        </Link>
+      
+        <div className="header-hire" >
+        <button class="button" type="button" to="/Home/contact">
+                <span class="button__text">Download CV</span>
+                <span class="button__icon">
+                  <Icon icon="material-symbols:download" />
+                </span>
+              </button>
+        </div>
+        <button className="header-menu-btn" onClick={onpenSidebar}>
+          <Icon icon="heroicons-solid:menu-alt-3" />
+        </button>
+        </nav>
+
+
+
+
+   
+ 
       </div>
     </div>
   );

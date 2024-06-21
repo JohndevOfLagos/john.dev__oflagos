@@ -2,15 +2,17 @@
 
 
 .header-wrapper {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 9999;
+  display: flex;
+  flex-direction: column;
     box-shadow: 0px 0px 5px 0px lighten($color: #000000, $amount: 70%);
-    background: rgba(0, 0, 0, 0); /* Initially transparent */
+    background: color.$primary-color-dark; /* Initially transparent */
     backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
-    z-index: 9;
+  width: 100%;    
+position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 9;
+  
 
 
     &>.header-body {
@@ -25,86 +27,54 @@
     }
 }
 
-
-.header-cancle-btn {
+nav {
   display: flex;
   align-items: center;
+   gap: 2rem;
+   @media(max-width:600px){
+     gap: none;
+   }
+}
+
+.header-menu-btn {
+  display: flex;
+  align-items: center;
+  @media(max-width:600px) {
+    margin-right: 2rem;
+
+  }
   padding: 4px;
   border-radius: 100%;
   border: none;
-  color: #000;
+  color: #fff;
   background-color: color.$primary-light-dark;
   cursor: pointer;
+  display: none;
+  @media(max-width:600px) {
+    display: flex;
+  }
 
   &>svg {
-    font-size: 30px;
+    font-size: 25px;
     padding: .2rem;
     background-color: color.$primary-color-orange;
     border-radius: 100%;
   }
+  
 }
 
-
-.header-hire {
+.brand-name-logo{
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 0.53em 2.53em;
-  border: 2px solid color.$primary-color-orange;
-  border-radius: .8rem;
-  color: #000;
-  background-color: transparent;
-  transition: all 200ms ease-in;
-  overflow: hidden;
-    cursor: pointer;
-    transition: all 200ms ease-in;
 
-    &>span {
+
+    &>h4 {
       font-size: 1rem;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-  
-    &>svg {
-      position: relative;
-      display: inline-block;
-      overflow: hidden;
-      width: 1.5em;
-      height: 1.5em;
-      margin-bottom: -0.275em;
-      margin-left: 0.6em;
-      transition: all 200ms ease-in;
-    }
-
-    &:hover {
       color: #fff;
-      border: 2px solid transparent;
-      background-color: darken(color.$primary-color-orange, $amount: 20%);
     }
-  
-    &:active {
-      color: #fff;
-      background-color: darken(color.$primary-color-orange, $amount: 20%);
-    }
-  
-    &:hover>svg {
-      transform: translateX(5px);
-      /* Slide the SVG to the right */
-    
-    }
-  
-  
-
-
-  
 }
 
 
-.header-hire:hover> svg {
-  transform: translateX(5px);
-  /* Slide the SVG to the right */
-
-}
 
 .nav-items {
     display: flex;
@@ -119,7 +89,7 @@
       display: inline-block; /* Changed from flex to inline-block */
       padding: 0 10px;
       text-decoration: none; 
-      color: #000; /* Added color for the text */
+      color: #fff; /* Added color for the text */
       font-size: 1rem;
       font-weight: 600;
       
@@ -148,3 +118,111 @@
 }
 
 
+
+.header-hire {
+  display: flex;
+  margin-right: 1rem;
+
+
+
+    &>.button {
+      position: relative;
+      width: 200px;
+      @media(max-width:600px) {
+        width: 170px;
+      }
+      height: 40px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      border: 1.5px solid color.$primary-color-orange;
+      background-color: transparent;
+      border-radius: .8rem;
+      overflow: hidden;
+      transition: all 200ms ease-in;
+      cursor: pointer;
+      transition: all 200ms ease-in;
+      
+  
+    
+    }
+
+
+    
+    .button, .button__icon, .button__text {
+      transition: all 0500ms ease-in-out;
+    }
+    
+    .button .button__text {
+      transform: translateX(22px);
+      color: #fff;
+      font-size: 1rem;
+      @media(max-width:600px) {
+        font-size: 0.8rem;
+      }
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    
+    .button .button__icon {
+      position: absolute;
+      transform: translateX(160px);
+      @media(max-width:600px) {
+        transform: translateX(130px);
+
+      }
+      height: 100%;
+      width: 40px;
+    
+      background-color: color.$primary-color-orange;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+    
+    .button__icon > svg {
+      font-size: 5rem;
+      width: 25px;
+
+      color: #fff;
+    }
+    
+    .button:hover {
+      background: color.$primary-color-orange;
+    }
+    
+    .button:hover .button__text {
+      color: transparent;
+    }
+    
+    .button:hover .button__icon {
+      width: 148px;
+      transform: translateX(25px);
+    }
+    
+    .button:active .button__icon {
+      background-color: darken(color.$primary-color-orange, $amount: 20%);
+    }
+    
+    .button:active {
+      border: 1px solid darken(color.$primary-color-orange, $amount: 20%);
+    }
+
+
+
+
+  
+ 
+  
+
+
+  
+}
+
+
+.header-hire:hover> svg {
+  transform: translateX(5px);
+  /* Slide the SVG to the right */
+
+}

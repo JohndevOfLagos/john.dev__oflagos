@@ -1,7 +1,6 @@
 import React from "react";
 import "./Resume.scss";
 
-import { useNavigate } from "react-router-dom";
 
 import { Icon } from "@iconify/react";
 
@@ -9,13 +8,6 @@ import { Icon } from "@iconify/react";
 
 export const Resume = () => {
 
-  const navigate = useNavigate();
-
-
-  const toggleViewResume = () => {
-    navigate("/Home/resume/view")
-
-  }
 
   return (
     <div className="Resume">
@@ -37,12 +29,6 @@ export const Resume = () => {
             </div>
 
             <div className="resumes-btn">
-              <button class="button view" type="button" onClick={toggleViewResume}>
-                <span class="button__text">View</span>
-                <span class="button__icon view">
-                  <Icon icon="carbon:view-off" />
-                </span>
-              </button>
               <button class="button" type="button">
                 <span class="button__text">Download</span>
                 <span class="button__icon">

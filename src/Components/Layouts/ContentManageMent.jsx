@@ -8,8 +8,6 @@ import { Projects } from 'Pages/Projects/Projects';
 import { Services } from 'Pages/Services/Services';
 import { Skills } from 'Pages/Skills/Skills';
 import { Contact } from 'Pages/Contact/Contact';
-import { Resume } from 'Pages/Resume/Resume';
-import { ResumeView } from 'Pages/Resume/ResumeView';
 import { SidebarNavigation } from 'Components/SidebarNavigation/SidebarNavigation';
 import { Footer } from 'Components/Footer/Footer';
 
@@ -46,11 +44,8 @@ export const ContentManageMent = () => {
                             <Route path='support-me' element=""/>
                             <Route path='projects' element={<Projects />}/>
                             <Route path="services" element={<Services/>} />
-                            <Route path="resume" element={<Resume/>} />
                             <Route path="skills" element={<Skills/>} />
                             <Route path="contact" element={<Contact/>} />
-                            <Route path="resume" element={<Resume/>} />
-                            <Route path="resume/view" element={<ResumeView/>} />
                         </Routes>
 
                 </Suspense>

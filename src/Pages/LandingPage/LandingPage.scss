@@ -6,11 +6,14 @@
   display: flex;
   flex-direction: column;
   border: 2px solid blue;
+  
+  background-color: color.$primary-color-dark;
   padding: 80px 80px;
-
+  border: 3px solid red;
   @media(max-width:600px) {
-    padding: 30px 20px 80px;
-  }
+ 
+     padding: 30px 20px;
+ }
 
   gap: 2rem;
 
@@ -61,7 +64,7 @@
 
 
     &>h5 {
-      color: #000;
+      color: #fff;
       font-size: 1.5rem;
       font-weight: 500;
       line-height: 0px;
@@ -79,7 +82,7 @@
         line-height: 40px;
       }
       font-weight: 400;
-      color: #000;
+      color: #fff;
       margin-top: 1rem;
       letter-spacing: -1.5px;
       text-transform: none;
@@ -136,7 +139,7 @@
   transition: all 200ms ease-in;
   overflow: hidden;
   cursor: pointer;
-  color: #000;
+  color: #fff;
   @media(max-width:600px) {
     width: 100%;
   }
@@ -233,7 +236,6 @@
 
 .hover-underline-animation {
   position: relative;
-  color: black;
   padding-bottom: 2px;
   text-align: center;
   margin-top: 0.3em;
@@ -241,7 +243,7 @@
   font-size: 1.1rem;
   line-height: 1.55;
   font-weight: 600;
-  color: #000;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: -0.5px;
 }
@@ -254,7 +256,7 @@
   height: 1.5px;
   bottom: 0;
   left: 0;
-  background-color: #000000;
+  background-color: #fff;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -272,7 +274,7 @@
   height: 1.5em;
   margin-bottom: -0.275em;
   margin-left: 0.6em;
-  color: #000;
+  color: #fff;
   transform: translateX(-8px);
   transition: all 500ms ease-in;
  }
@@ -345,7 +347,7 @@
 
 
       .bg-cream-shade {
-        background-color: #e7e2dc;
+        background-color: color.$primary-color-dark;
         position: absolute;
         width: 100%;
         height: 0%; /* Start with height 0% */
@@ -407,12 +409,13 @@
     font-weight: 500;
     margin-bottom: 20px;
     text-transform: uppercase;
+    color: #fff;
   }
   
   &>.animated-line {
     width: 1.4px;
     height: 60px;
-    background-color: black;
+    background-color: #fff;
     margin-top: 2.5rem; /* Adjust this margin to control the space below the line */
     animation: slide-fade 2s infinite;
   }
